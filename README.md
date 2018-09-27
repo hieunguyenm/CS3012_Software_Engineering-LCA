@@ -21,3 +21,17 @@ I had started the project previously in another repo based in python however I d
 - How much work will be given from other modules
 - Difficulty in deploying serverless archiecture in Go
 - Making APIs in Golang specifically
+
+## MoSCoW - User Acceptance Criteria
+### Must
+- Be able to generate a tree of given nodes
+- Be able to search tree for LCA of two children nodes
+### Should
+- Be able to handle all invalid input as nodes
+- Be able to handle invalid operations
+### Could
+- Have all tests be run with travis ci upon each commit to master
+- Have 100% code coverage
+### Would
+- Have an API version capable of input and output via JSON
+- Be deployed from travis ci to AWS API Gateway
