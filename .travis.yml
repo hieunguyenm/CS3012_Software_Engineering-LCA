@@ -4,8 +4,8 @@ go:
 script:
     - go test -v
     - go build
-    - gox -osarch="linux/386 linux/amd64 darwin/amd64" -output="out/{{.Dir}}-{{.OS}}-{{.Arch}}" github.com/csigildea/CS3021_Software_Engineering-LCA
-env:
+   env:
+    - TRAVIS_BUILD_DIR=${TRAVIS_HOME}/gopath/src/github.com/CSIGildea/CS3012_Software_Engineering-LCA/lca   
     global:
 notifications:
     on_success: never
