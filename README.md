@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/CSIGildea/CS3012_Software_Engineering-LCA.svg?token=SrxNrKGvwgns7GQzK9xv&branch=master)](https://travis-ci.com/CSIGildea/CS3012_Software_Engineering-LCA)
 # CS3012 - Software Engineering
 
 ## Overall Thoughts
