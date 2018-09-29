@@ -3,7 +3,6 @@ go:
     - 1.10
 script:
     - go test ./lca
-    - go build
 notifications:
     on_success: never
     on_failure: never
