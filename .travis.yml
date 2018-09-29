@@ -2,10 +2,8 @@ language: go
 go:
     - 1.10
 script:
-    - go test -v
+    - go test ./lca
     - go build
-   env:
-    - TRAVIS_BUILD_DIR=${TRAVIS_HOME}/gopath/src/github.com/CSIGildea/CS3012_Software_Engineering-LCA/lca
 notifications:
     on_success: never
     on_failure: never
