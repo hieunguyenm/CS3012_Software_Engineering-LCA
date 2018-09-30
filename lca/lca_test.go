@@ -51,3 +51,12 @@ func Test_Insert_Correct_Location_Right(t *testing.T) {
     t.Error("Expected \"75\", got ", result)
   }
 }
+
+func Test_Insert_Child_Not_Present(t *testing.T) {
+	root:= insert(nil,50)
+	insert(root,25)
+	var result = root.Right
+	if result != nil {
+    t.Error("Expected \"nil\", got ", result)
+  }
+}
