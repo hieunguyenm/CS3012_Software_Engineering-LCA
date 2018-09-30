@@ -32,3 +32,22 @@ func Test_LCA_Not_Present_Keys_Children_Of_Root(t *testing.T) {
 }
 
 
+func Test_Tree_Correct_Location_Left(t *testing.T) {
+	root:= insert(nil,50)
+	insert(root,25)
+	insert(root,75)
+	var result int = root.Left.Value;
+	if result != 25 {
+    t.Error("Expected \"25\", got ", result)
+  }
+}
+
+func Test_Tree_Correct_Location_Right(t *testing.T) {
+	root:= insert(nil,50)
+	insert(root,25)
+	insert(root,75)
+	var result int = root.Right.Value;
+	if result != 75 {
+    t.Error("Expected \"75\", got ", result)
+  }
+}
