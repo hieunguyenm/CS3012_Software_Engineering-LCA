@@ -2,43 +2,33 @@ package lca
 
 import "testing"
 
-func Test_Hello(t *testing.T) {
-  var v string
-  v = Hello()
-  if v != "Hello" {
-    t.Error("Expected \"Hello\", got ", v)
-  }
-}
-
 func Test_LCA_Root_Is_LCA(t *testing.T) {
-	tree:= &node{
-		value:4
-	}
-	tree = insertFromRoot(tree,1)
-    result = findLCA(tree,1)
+	root:= insert(nil,4)
+	insert(root,1)
+	var result int = findLCA(root,4,1)
 	if result != 4 {
-    t.Error("Expected \"4\", got ", v)
+    t.Error("Expected \"4\", got ", result)
   }
 }
 
-func Test_LCA_Node_Not_Exist(t *testing.T) {
-	tree:= &node{
-		value:4
-	}
-    result = findLCA(tree,1)
-	if result != nil {
-    t.Error("Expected \"nil\" as node with value 1 doesn't exist got ", v)
+func Test_LCA_Root_Is_LCA_Keys_Children_Of_Root(t *testing.T) {
+	root:= insert(nil,50)
+	insert(root,25)
+	insert(root,75)
+	var result int = findLCA(root,25,75)
+	if result != 50 {
+    t.Error("Expected \"50\", got ", result)
   }
 }
 
-func Test_LCA_Good_Behvaiour_Case(t *testing.T) {
-	tree:= &node{
-		value:4
-	}
-	tree = insertFromRoot(tree,1)
-    tree = insertFromRoot(tree,2)
-	result = findLCA(1,2)
-	if result != 3 {
-    t.Error("Expected \"4\", got ", v)
+func Test_LCA_Not_Present_Keys_Children_Of_Root(t *testing.T) {
+	root:= insert(nil,50)
+	insert(root,25)
+	insert(root,75)
+	var result int = findLCA(root,25,76)
+	if result != -1 {
+    t.Error("Expected \"-1\", got ", result)
   }
 }
+
+
