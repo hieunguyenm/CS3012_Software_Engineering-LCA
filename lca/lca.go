@@ -58,8 +58,3 @@ func findLCA(tree *Tree, keyOne int, keyTwo int) int{
 	return keyOnePath[i-1]
 
 }
-
-
-func Hello() string {
-	return "Hello";
-}
