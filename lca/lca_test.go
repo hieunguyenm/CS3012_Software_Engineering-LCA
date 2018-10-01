@@ -60,3 +60,24 @@ func Test_Insert_Child_Not_Present(t *testing.T) {
     t.Error("Expected \"nil\", got ", result)
   }
 }
+
+func Test_Find_Path_Present(t *testing.T) {
+	root:= insert(nil,50)
+	insert(root,25)
+	var testKeyPath [] int
+	var result = findPath(root,&testKeyPath,25)
+	if result != true {
+    t.Error("Expected \"true\", got ", result)
+  }
+}
+
+func Test_Find_Path_Not_Present(t *testing.T) {
+	root:= insert(nil,50)
+	insert(root,25)
+	var testKeyPath [] int
+	var result = findPath(root,&testKeyPath,26)
+	if result != false {
+    t.Error("Expected \"false\", got ", result)
+  }
+}
+
