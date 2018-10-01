@@ -24,15 +24,15 @@ I had started the project previously in another repo based in python however I d
 - Making APIs in Golang specifically
 
 ## MoSCoW - User Acceptance Criteria
-### Must
+### Must Have
 - Be able to generate a tree of given nodes
 - Be able to search tree for LCA of two children nodes
-### Should
+### Should Have
 - Be able to handle all invalid input as nodes
 - Be able to handle invalid operations
-### Could
+### Could Have
 - Have all tests be run with travis ci upon each commit to master
 - Have 100% code coverage
-### Would
+### Would Like to Have
 - Have an API version capable of input and output via JSON
 - Be deployed from travis ci to AWS API Gateway
